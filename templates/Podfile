@@ -1,14 +1,22 @@
-source 'https://github.com/CocoaPods/Specs'
+source 'https://github.com/CocoaPods/Specs.git'
+source 'git@github.com:makingspace/iOS-Specs.git'
 
 platform :ios, '<%= deployment_target %>'
 
 # Add Application pods here
+  pod 'MBProgressHUD', '~>0.9'
+  pod 'MSNetworking'
+  pod 'Masonry'
+  pod 'pop', '~>1.0'
+  pod 'MSSPopMasonry'
 
 target :unit_tests, :exclusive => true do
   link_with '<%= test_target_name %>'
   pod 'Specta'
   pod 'Expecta'
-  pod 'OCMock'
+  pod 'KIF'
+  pod 'OCMockito'
+  pod 'Swizzlean'
   pod 'OHHTTPStubs'
 end
 

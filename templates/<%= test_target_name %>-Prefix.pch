@@ -2,10 +2,11 @@
 
 #ifdef __OBJC__
 <% if use_cocoapods %>
+    #import <UIKit/UIKit.h>
+    #import "Specta.h"
     #define EXP_SHORTHAND
-    #import <Specta/Specta.h>
-    #import <Expecta/Expecta.h>
-    #import <OCMock/OCMock.h>
+    #import "Expecta.h"
+    #import <OHHTTPStubs/OHHTTPStubs.h>
 <% else %>
     @import XCTest;
 <% end %>

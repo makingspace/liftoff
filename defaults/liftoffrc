@@ -1,15 +1,15 @@
 ############################################################################
 # The following keys can be used to configure defaults for project creation
 # project_name:
-# company:
-# author:
-# prefix:
-# company_identifier:
+company: MakeSpace
+author: Al Tyus
+prefix: MS
+company_identifier: com.makespace
 ############################################################################
 
 test_target_name: UnitTests
-configure_git: true
-warnings_as_errors: true
+configure_git: false
+warnings_as_errors: false
 enable_static_analyzer: true
 indentation_level: 4
 use_tabs: false
@@ -26,7 +26,6 @@ run_script_phases:
 
 templates:
   - travis.yml: .travis.yml
-  - Gemfile.rb: Gemfile
   - test.sh: bin/test
   - setup.sh: bin/setup
   - README.md: README.md
@@ -59,7 +58,7 @@ warnings:
 
 xcode_command: open -a 'Xcode' .
 
-project_template: swift
+project_template: objc
 
 app_target_templates:
   objc:
@@ -68,7 +67,6 @@ app_target_templates:
       - Protocols:
       - Headers:
       - Models:
-      - ViewModels:
       - Controllers:
         - <%= prefix %>AppDelegate.h
         - <%= prefix %>AppDelegate.m
